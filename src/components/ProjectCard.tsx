@@ -1,3 +1,4 @@
+import { logEvent } from "@/lib/firebase";
 import type { Project } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
       
       <div className="flex items-center gap-3 mt-auto px-6 pb-6">
         <Button asChild size="sm" className="w-full gap-2 transition-transform group-hover:translate-y-[-2px]">
-          <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={project.websiteUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => logEvent('select_content', { content_type: 'project_link', item_id: project.id, item_name: project.title, link_type: 'website' })}
+          >
             <ExternalLink className="w-4 h-4" />
             Visit Site
           </a>
@@ -56,7 +62,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         
         {project.githubUrl && (
           <Button asChild variant="outline" size="icon" className="shrink-0 transition-transform group-hover:translate-y-[-2px]">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+            <a 
+              href={project.githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="View on GitHub"
+              onClick={() => logEvent('select_content', { content_type: 'project_link', item_id: project.id, item_name: project.title, link_type: 'github' })}
+            >
               <Github className="w-4 h-4" />
             </a>
           </Button>

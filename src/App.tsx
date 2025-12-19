@@ -1,8 +1,12 @@
+import { useEffect } from "react"
+import { logEvent } from "@/lib/firebase"
 import { Header } from "@/components/Header"
 import { ProjectCard } from "@/components/ProjectCard"
 import { projects } from "@/data/projects"
 
 function App() {
+  useEffect(() => { logEvent("page_view") }, [])
+
   return (
     <div className="min-h-screen bg-background font-sans antialiased text-foreground selection:bg-primary/10 selection:text-primary">
       <Header />
