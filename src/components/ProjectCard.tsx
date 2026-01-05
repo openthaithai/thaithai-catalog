@@ -48,20 +48,27 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       
       <div className="flex items-center gap-3 mt-auto px-6 pb-6">
-        <Button asChild size="sm" className="w-full gap-2 transition-transform group-hover:translate-y-[-2px]">
-          <a 
-            href={project.websiteUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={() => logEvent('select_content', { content_type: 'project_link', item_id: project.id, item_name: project.title, link_type: 'website' })}
-          >
-            <ExternalLink className="w-4 h-4" />
-            Visit Site
-          </a>
-        </Button>
+        {project.websiteUrl && (
+          <Button asChild size="sm" className="w-full gap-2 transition-transform group-hover:translate-y-[-2px]">
+            <a 
+              href={project.websiteUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => logEvent('select_content', { content_type: 'project_link', item_id: project.id, item_name: project.title, link_type: 'website' })}
+            >
+              <ExternalLink className="w-4 h-4" />
+              Visit Site
+            </a>
+          </Button>
+        )}
         
         {project.githubUrl && (
-          <Button asChild variant="outline" size="icon" className="shrink-0 transition-transform group-hover:translate-y-[-2px]">
+          <Button 
+            asChild 
+            variant="outline" 
+            size={project.websiteUrl ? "icon" : "sm"} 
+            className={project.websiteUrl ? "shrink-0 transition-transform group-hover:translate-y-[-2px]" : "w-full gap-2 transition-transform group-hover:translate-y-[-2px]"}
+          >
             <a 
               href={project.githubUrl} 
               target="_blank" 
@@ -70,6 +77,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               onClick={() => logEvent('select_content', { content_type: 'project_link', item_id: project.id, item_name: project.title, link_type: 'github' })}
             >
               <Github className="w-4 h-4" />
+              {!project.websiteUrl && "GitHub"}
             </a>
           </Button>
         )}

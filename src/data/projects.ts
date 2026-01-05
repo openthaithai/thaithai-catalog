@@ -4,14 +4,16 @@ import ssoPortfolioImg from '@/assets/images/local/sso-portfolio.png';
 import simssoImg from '@/assets/images/local/simsso.png';
 import ssoboardImg from '@/assets/images/local/ssoboard.png';
 import seagamesImg from '@/assets/images/local/seagames2025.png';
-import parliamentHackImg from '../assets/images/local/parliamenthack.png';
+import parliamentHackImg from '@/assets/images/local/parliamenthack.png';
 import bananaWebReportImg from '@/assets/images/local/bananawebreport.png';
+
+import defaultImg from '@/assets/images/default.png'
 
 export interface Project {
   id: string;
   title: string;
   description: string;
-  websiteUrl: string;
+  websiteUrl?: string;
   githubUrl?: string; // Optional as not all might be public
   tags: string[];
   imageUrl?: string;
@@ -99,4 +101,14 @@ export const projects: Project[] = [
     status: 'live',
     imageUrl: bananaWebReportImg,
   },
+  {
+    id: '9',
+    title: 'Thai Constitutional Notes',
+    description: 'โปรเจคสำหรับรวบรวม จัดระเบียบ และเผยแพร่ข้อมูล "บันทึกคำต่อคำการประชุมคณะกรรมการร่างรัฐธรรมนูญ 2560" เพื่อส่งเสริมความโปร่งใสและช่วยให้การตีความเจตนารมณ์ของรัฐธรรมนูญทำได้ง่ายขึ้นโดยใช้เทคโนโลยีข้อมูล',
+    websiteUrl: '',
+    githubUrl: 'https://github.com/openthaithai/thai-constitutional-notes',
+    tags: ['Open Source', 'Data'],
+    status: 'live',
+    imageUrl: defaultImg,
+  }
 ];
