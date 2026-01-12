@@ -5,7 +5,7 @@ import simssoImg from '@/assets/images/local/simsso.png';
 import ssoboardImg from '@/assets/images/local/ssoboard.png';
 import seagamesImg from '@/assets/images/local/seagames2025.png';
 import parliamentHackImg from '@/assets/images/local/parliamenthack.png';
-import bananaWebReportImg from '@/assets/images/local/bananawebreport.png';
+import bombGamblingImg from '@/assets/images/local/bomb-gambling.png';
 
 import defaultImg from '@/assets/images/default.png'
 
@@ -93,13 +93,13 @@ export const projects: Project[] = [
   },
   {
     id: '8',
-    title: 'Banana Report',
-    description: 'Civic Tech Reporting Platform',
-    websiteUrl: 'https://open.thaith.ai/bananawebreport/',
-    githubUrl: 'https://github.com/openthaithai/banana-report',
-    tags: ['Civic Tech', 'Reporting'],
+    title: 'Bomb Gambling',
+    description: 'Interactive web app raising awareness about gambling risks through simulations and narratives.',
+    websiteUrl: 'https://open.thaith.ai/bomb-gambling/',
+    githubUrl: '',
+    tags: ['Gambling Awareness', 'Reporting', 'Data'],
     status: 'live',
-    imageUrl: bananaWebReportImg,
+    imageUrl: bombGamblingImg,
   },
   {
     id: '9',
