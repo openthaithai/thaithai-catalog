@@ -6,6 +6,8 @@ import ssoboardImg from '@/assets/images/local/ssoboard.png';
 import seagamesImg from '@/assets/images/local/seagames2025.png';
 import parliamentHackImg from '@/assets/images/local/parliamenthack.png';
 import bombGamblingImg from '@/assets/images/local/bomb-gambling.png';
+import hearingImg from '@/assets/images/local/hearing.png'
+import flightImg from '@/assets/images/local/flight.png'
 
 import defaultImg from '@/assets/images/default.png'
 
@@ -29,7 +31,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/open-sso',
     tags: ['SSO', 'Authentication', 'Open Source'],
     status: 'live',
-    imageUrl: openssoImg,
+    imageUrl: openssoImg
   },
   {
     id: '2',
@@ -39,7 +41,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/sso-care',
     tags: ['Pension', 'Calculator', 'SSO'],
     status: 'live',
-    imageUrl: careImg,
+    imageUrl: careImg
   },
   {
     id: '3',
@@ -49,7 +51,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/sso-portfolio',
     tags: ['Portfolio', 'SSO', 'Projects'],
     status: 'live',
-    imageUrl: ssoPortfolioImg,
+    imageUrl: ssoPortfolioImg
   },
   {
     id: '4',
@@ -59,7 +61,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/sso-simulation',
     tags: ['Simulation', 'Testing', 'SSO'],
     status: 'live',
-    imageUrl: simssoImg,
+    imageUrl: simssoImg
   },
   {
     id: '5',
@@ -69,7 +71,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/sso-board',
     tags: ['Dashboard', 'Data', 'SSO'],
     status: 'live',
-    imageUrl: ssoboardImg,
+    imageUrl: ssoboardImg
   },
   {
     id: '6',
@@ -79,7 +81,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/seagames2025-schedule',
     tags: ['Sports', 'Schedule', 'SEA Games'],
     status: 'live',
-    imageUrl: seagamesImg,
+    imageUrl: seagamesImg
   },
   {
     id: '7',
@@ -89,7 +91,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/parliamenthack',
     tags: ['Hackathon', 'Open Data', 'Civic Tech'],
     status: 'live',
-    imageUrl: parliamentHackImg,
+    imageUrl: parliamentHackImg
   },
   {
     id: '8',
@@ -99,7 +101,7 @@ export const projects: Project[] = [
     githubUrl: '',
     tags: ['Gambling Awareness', 'Reporting', 'Data'],
     status: 'live',
-    imageUrl: bombGamblingImg,
+    imageUrl: bombGamblingImg
   },
   {
     id: '9',
@@ -109,6 +111,26 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/openthaithai/thai-constitutional-notes',
     tags: ['Open Source', 'Data'],
     status: 'live',
-    imageUrl: defaultImg,
+    imageUrl: defaultImg
+  },
+  {
+    id: '10',
+    title: 'SSO Hearing',
+    description: 'Dashboard สรุปผลการรับฟังความคิดเห็นร่างระเบียบกระทรวงแรงงาน ว่าด้วยหลักเกณฑ์และวิธีการเลือกตั้งบอร์ดประกันสังคม เพื่อความโปร่งใสในกระบวนการมีส่วนร่วม',
+    websiteUrl: 'https://sso.thaith.ai/hearing/',
+    githubUrl: '',
+    tags: ['Public Hearing', 'SSO', 'Governance'],
+    status: 'live',
+    imageUrl: hearingImg
+  },
+  {
+    id: '11',
+    title: 'Flight',
+    description: 'สำรวจงบประมาณการเดินทางไปต่างประเทศของราชการไทย มูลค่า 688 ล้านบาท ผ่านข้อมูลเชิงลึก',
+    websiteUrl: 'https://open.thaith.ai/flight/',
+    githubUrl: '',
+    tags: ['Budget', 'Transparency', 'Government'],
+    status: 'live',
+    imageUrl: flightImg
   }
 ];
